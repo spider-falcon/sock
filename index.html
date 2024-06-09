@@ -27,38 +27,57 @@
         </div>
         <script>
             document.addEventListener("DOMContentLoaded", function() {
-                const resources = document.querySelectorAll('link[rel="stylesheet"], script[defer], script[src]');
-                let loadedResources = 0;
-                const totalResources = resources.length;
+    const resources = document.querySelectorAll('link[rel="stylesheet"], script[defer], script[src]');
+    let loadedResources = 0;
+    const totalResources = resources.length;
 
-                function checkReady() {
-                    console.log(totalResources," out of", loadedResources);
-                    if (loadedResources === totalResources) {
-                        setTimeout(function() {
-                            document.getElementById("loader").remove();
-                            document.getElementById("appContent").style.display = "block";
-                        }, 100);
-                    }else{
-                        loadedResources++;
-                        setTimeout(function() { window.location.reload();}, 8000);
-                    }
-                }
+    function checkReady() {
+        console.log(loadedResources, "out of", totalResources);
+        if (loadedResources === totalResources) {
+            setTimeout(function() {
+                document.getElementById("loader").remove();
+                document.getElementById("appContent").style.display = "block";
+            }, 100);
+        }
+    }
 
-                resources.forEach(resource => {
-                    if ((resource.tagName === 'LINK' && resource.sheet) || 
-                        (resource.tagName === 'SCRIPT' && (resource.readyState === 'complete' || resource.readyState === 'loaded'))) {
-                        checkReady();
-                    } else {
-                        resource.addEventListener('load', checkReady, { once: true });
-                    }
-                });
+    if (totalResources === 0) {
+        // If no resources need to be loaded, display the content immediately.
+        setTimeout(function() {
+            document.getElementById("loader").remove();
+            document.getElementById("appContent").style.display = "block";
+        }, 100);
+    } else {
+        resources.forEach(resource => {
+            if (resource.tagName === 'LINK' && resource.sheet) {
+                loadedResources++;
+                checkReady();
+            } else if (resource.tagName === 'SCRIPT' && (resource.readyState === 'complete' || resource.readyState === 'loaded')) {
+                loadedResources++;
+                checkReady();
+            } else {
+                resource.addEventListener('load', function() {
+                    loadedResources++;
+                    checkReady();
+                }, { once: true });
 
-                if (totalResources === 0) {
-                    setTimeout(function() {
-                        window.location.reload();
-                    }, 5000);
-                }
-            });
+                resource.addEventListener('error', function() {
+                    console.error('Resource failed to load:', resource);
+                    loadedResources++;
+                    checkReady();
+                }, { once: true });
+            }
+        });
+
+        // Set a timeout to reload the page if resources take too long to load
+        setTimeout(function() {
+            if (loadedResources < totalResources) {
+                window.location.reload();
+            }
+        }, 8000);
+    }
+});
+
         </script>
     </div>
     <div id="appContent" style="display: none;">
