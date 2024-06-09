@@ -4,25 +4,70 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0 ,user-scalable=no">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+    <link rel="stylesheet" href="index.css">
+    <link rel="shortcut icon" href="icons/socketwhite.png" type="image/x-icon">
+    <script src="app.js"></script>
     <title>sock</title>
 </head>
 <body>
-    <div>
-        <a href="">
-            <span class="material-symbols-outlined">home</span>
-        </a>
+    <div id="loader">
+        <div>
+            <img src="icons/socketwhite.png" alt="">
+        </div>
+        <script>
+            document.addEventListner("DOMContentLoader", function () {
+                const stylesheets = document.querySelectorAll('link[rel="stylesheet"]');
+                const scripts = document.querySelectorAll('script[defer], script[src]');
+
+                function checkReady() {
+                    loadedResources++;
+                    if (loadedResources === totalResources) {
+                        setTimeout(function(){
+                            document.getElementById("loader").remove();
+                        }, 1000);
+                        document.getElementById("appContent").style.display = "";
+                    }
+                }
+
+                stylesheets.forEach(sheet => {
+                    if (sheet.sheet) {
+                        checkReady();
+                    } else {
+                        sheet.addEventListener('load', checkReady, { once: true });
+                    }
+                });
+
+                scripts.forEach(script => {
+                    if (script.readyState === 'complete' || script.readyState === 'loaded') {
+                        checkReady();
+                    } else {
+                        script.addEventListener('load', checkReady, { once: true });
+                    }
+                });
+                if (totalResources === 0) {
+                    setTimeout(function(){window.location.reload(1);}, 5000);
+                }
+            });
+        </script>
     </div>
-    <div>
-        <div>Show messages</div>
-    </div>
-    <div>
-        sent messages
-    </div>
-    <div>
-        search
-    </div>
-    <div>
-        profile
+    <div id="appContent" style="display: none;">
+        <div>
+            <a href="">
+                <span class="material-symbols-outlined">home</span>
+            </a>
+        </div>
+        <div>
+            <div>Show messages</div>
+        </div>
+        <div>
+            sent messages
+        </div>
+        <div>
+            search
+        </div>
+        <div>
+            profile
+        </div>
     </div>
 </body>
 </html>
