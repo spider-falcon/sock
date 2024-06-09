@@ -32,7 +32,7 @@
                 const totalResources = resources.length;
 
                 function checkReady() {
-                    if (loadedResources-1 === totalResources) {
+                    if (loadedResources+1 === totalResources) {
                         setTimeout(function() {
                             document.getElementById("loader").remove();
                             document.getElementById("appContent").style.display = "block";
