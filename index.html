@@ -25,36 +25,27 @@
             </center>
         </div>
         <script>
-            document.addEventListener("DOMContentLoaded", function () {
-                const stylesheets = document.querySelectorAll('link[rel="stylesheet"]');
-                const scripts = document.querySelectorAll('script[defer], script[src]');
+            document.addEventListener("DOMContentLoaded", function() {
+                const resources = document.querySelectorAll('link[rel="stylesheet"], script[defer], script[src]');
                 let loadedResources = 0;
-                const totalResources = stylesheets.length + scripts.length;
+                const totalResources = resources.length;
 
                 function checkReady() {
                     loadedResources++;
                     if (loadedResources === totalResources) {
                         setTimeout(function() {
                             document.getElementById("loader").remove();
-                        }, 1000);
-                        document.getElementById("appContent").style.display = "block";
+                            document.getElementById("appContent").style.display = "block";
+                        }, 100);
                     }
-                    console.log("html,css and javascript full loaded");
                 }
 
-                stylesheets.forEach(sheet => {
-                    if (sheet.sheet) {
+                resources.forEach(resource => {
+                    if ((resource.tagName === 'LINK' && resource.sheet) || 
+                        (resource.tagName === 'SCRIPT' && (resource.readyState === 'complete' || resource.readyState === 'loaded'))) {
                         checkReady();
                     } else {
-                        sheet.addEventListener('load', checkReady, { once: true });
-                    }
-                });
-
-                scripts.forEach(script => {
-                    if (script.readyState === 'complete' || script.readyState === 'loaded') {
-                        checkReady();
-                    } else {
-                        script.addEventListener('load', checkReady, { once: true });
+                        resource.addEventListener('load', checkReady, { once: true });
                     }
                 });
 
