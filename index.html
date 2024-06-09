@@ -30,13 +30,14 @@
                 const totalResources = resources.length;
 
                 function checkReady() {
-                    loadedResources++;
-                    console.log(totalResources," out of", loadedResources);
                     if (loadedResources === totalResources) {
                         setTimeout(function() {
                             document.getElementById("loader").remove();
                             document.getElementById("appContent").style.display = "block";
                         }, 100);
+                    }else{
+                        loadedResources++;
+                        console.log(totalResources," out of", loadedResources);
                     }
                 }
 
