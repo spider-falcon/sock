@@ -2,30 +2,32 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0 ,user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
     <link rel="stylesheet" href="index.css">
     <link rel="shortcut icon" href="icons/socketwhite.png" type="image/x-icon">
-    <script src="app.js"></script>
+    <script src="app.js" defer></script>
     <title>sock</title>
 </head>
 <body>
     <div id="loader">
         <div>
-            <img src="icons/socketwhite.png" alt="">
+            <img src="icons/socketwhite.png" alt="Loader Icon">
         </div>
         <script>
-            document.addEventListner("DOMContentLoader", function () {
+            document.addEventListener("DOMContentLoaded", function () {
                 const stylesheets = document.querySelectorAll('link[rel="stylesheet"]');
                 const scripts = document.querySelectorAll('script[defer], script[src]');
+                let loadedResources = 0;
+                const totalResources = stylesheets.length + scripts.length;
 
                 function checkReady() {
                     loadedResources++;
                     if (loadedResources === totalResources) {
-                        setTimeout(function(){
+                        setTimeout(function() {
                             document.getElementById("loader").remove();
                         }, 1000);
-                        document.getElementById("appContent").style.display = "";
+                        document.getElementById("appContent").style.display = "block";
                     }
                 }
 
@@ -44,8 +46,11 @@
                         script.addEventListener('load', checkReady, { once: true });
                     }
                 });
+
                 if (totalResources === 0) {
-                    setTimeout(function(){window.location.reload(1);}, 5000);
+                    setTimeout(function() {
+                        window.location.reload();
+                    }, 5000);
                 }
             });
         </script>
