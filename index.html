@@ -39,6 +39,7 @@
                         }, 100);
                     }else{
                         loadedResources++;
+                        setTimeout(function() { window.location.reload();}, 8000);
                         console.log(totalResources," out of", loadedResources);
                     }
                 }
