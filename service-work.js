@@ -2,7 +2,9 @@ const CACHE_NAME = 'REALM 0.1 Alpha';
 const urlsToCache = [
   '/',
   '/index.html',
+  '/sock.html',
   '/style.css',
+  '/sock.css',
   '/app.js',
   'icon',
   'icon/Realm_transparent2.png'
