@@ -32,6 +32,7 @@
                 const totalResources = resources.length;
 
                 function checkReady() {
+                    console.log(totalResources," out of", loadedResources);
                     if (loadedResources+1 === totalResources) {
                         setTimeout(function() {
                             document.getElementById("loader").remove();
@@ -40,7 +41,6 @@
                     }else{
                         loadedResources++;
                         setTimeout(function() { window.location.reload();}, 8000);
-                        console.log(totalResources," out of", loadedResources);
                     }
                 }
 
