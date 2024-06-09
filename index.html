@@ -33,7 +33,7 @@
 
                 function checkReady() {
                     console.log(totalResources," out of", loadedResources);
-                    if (loadedResources+1 === totalResources) {
+                    if (loadedResources === totalResources) {
                         setTimeout(function() {
                             document.getElementById("loader").remove();
                             document.getElementById("appContent").style.display = "block";
