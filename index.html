@@ -16,8 +16,8 @@
                 body{
                     display: flex;
                 }img{
-                    width: auto;
-                    height: 100%;
+                    width: 50%;
+                    height: auto;
                 }
             </style>
             <center>
@@ -32,6 +32,7 @@
 
                 function checkReady() {
                     loadedResources++;
+                    console.log(totalResources," out of", loadedResources);
                     if (loadedResources === totalResources) {
                         setTimeout(function() {
                             document.getElementById("loader").remove();
