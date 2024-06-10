@@ -40,8 +40,8 @@ div#appContent{
 
 
 img#smallLogo{
-    width: 24px;
-    height: 24px;
+    width: 30px;
+    height: 30px;
     padding: 2px;
     background: white;
     backdrop-filter: blur(12px);
@@ -54,6 +54,6 @@ img#smallLogo{
   'FILL' 1,
   'wght' 700,
   'GRAD' 200,
-  'opsz' 24;
+  'opsz' 30;
   color: white;
 }
