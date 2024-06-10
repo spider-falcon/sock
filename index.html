@@ -43,11 +43,9 @@
     }
 
     if (totalResources === 0) {
-        // If no resources need to be loaded, display the content immediately.
         setTimeout(function() {
-            document.getElementById("loader").remove();
-            document.getElementById("appContent").style.display = "block";
-        }, 100);
+            window.location.reload();
+        }, 8000);
     } else {
         resources.forEach(resource => {
             if (resource.tagName === 'LINK' && resource.sheet) {
