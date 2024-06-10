@@ -25,12 +25,14 @@ div#appContent{
     z-index: 100;
     position: fixed;
     padding: 15px;
-    bottom: 5px;
+    bottom: 0px;
     margin: auto;
-    width: 50%;
+    width: 100%;
 }div.navigateBar{
     border: 2px solid transparent;
     border-radius: 15px;
+    padding: 10px;
+    width: 50%;
 }
 
 
