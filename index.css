@@ -110,11 +110,26 @@ div#mySocket ,div#searchDiv,div#profileDiv{
 	margin: 15px auto 15px 15px; 
 }div#profileDiv div#profileDivFrame div h1#usernameMain{
     padding: 2px 5px;
+    text-align: left;
+    text-indent: 5px;
 }div#profileDiv div#profileDivFrame div h1#user_nameMain{
     padding: 2px 5px;
+    text-align: left;
+    text-indent: 5px;
 }/* div#profileDiv div div.options    <different>
 and div#profileDiv div div.options button added to top because its look like previouse*/
-
+div#profileDiv div#profileDivFrame div div button{
+    background: transparent;
+    cursor: pointer;
+    border: none;
+}div#profileDiv div#profileDivFrame div div button p{
+    font-family: monospace;
+    text-transform: lowercase;
+}div#profileDiv div#profileDivFrame div div button span{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    text-transform: lowercase;
+}
 
 
 img#smallLogo{
