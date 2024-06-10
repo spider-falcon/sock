@@ -123,6 +123,13 @@ div#profileDiv div#profileDivFrame div div button{
     cursor: pointer;
     border: none;
     color: white;
+}div#profileDiv div#profileDivFrame div button p{
+    font-family: monospace;
+    text-transform: lowercase;
+}div#profileDiv div#profileDivFrame div button span{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    text-transform: lowercase;
 }div#profileDiv div#profileDivFrame div div button p{
     font-family: monospace;
     text-transform: lowercase;
