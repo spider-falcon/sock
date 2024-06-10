@@ -95,9 +95,12 @@ div#mySocket ,div#searchDiv,div#profileDiv{
     margin: auto 5px;
 }div#profileDiv div#profileDivFrame{
     display: flex;
+    padding: 5px;
+    margin: 10px 0px;
+
 }div#profileDiv div#profileDivFrame img#userMainlogo{
-	width: 100px;
-	height: 100px;
+	width: 80px;
+	height: 80px;
 	padding: 5px;
 	background: white;
 	border: 2px solid #282828;
