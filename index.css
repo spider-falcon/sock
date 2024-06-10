@@ -71,7 +71,7 @@ div#mySocket ,div#searchDiv{
 }div.searchField{
     border: 2px solid rgba(37, 37, 37, 0.9);
     border-radius: 15px;
-    width: 100%;
+    width: 80%;
     margin: 15px;
     padding: 0px;
 }div.searchField input#searchQuery{
