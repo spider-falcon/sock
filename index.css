@@ -58,14 +58,14 @@ div#mySocket ,div#searchDiv,div#profileDiv{
     border-radius: 20px;
     position: absolute;
     width: max-content;
-}div#mySocket div.options button#butWorldGallery, div#mySocket div.options button#butMyGallery, div#profileDiv div#profileDivFrame div div.options button{
+}div#mySocket div.options button#butWorldGallery, div#mySocket div.options button#butMyGallery, div#profileDiv div div.options button{
     border: none;
     border-radius: 15px;
     padding: 5px 8px;
     background: rgba(0, 0, 0, 0);
     color: white;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}div#mySocket div.options button#butWorldGallery:active,div#mySocket div.options button#butMyGallery:active, div#profileDiv div#profileDivFrame div div.options button:active{
+}div#mySocket div.options button#butWorldGallery:active,div#mySocket div.options button#butMyGallery:active, div#profileDiv div div.options button:active{
     border-radius: 15px;
     background: rgba(54, 54, 54, 0.9);
 }div.searchField{
@@ -115,7 +115,7 @@ div#mySocket ,div#searchDiv,div#profileDiv{
     border-radius: 20px;
     position: absolute;
     width: max-content;
-}/* div#profileDiv div#profileDivFrame div div.options button added to top because its look like previouse*/
+}/* div#profileDiv div div.options button added to top because its look like previouse*/
 
 
 
