@@ -50,6 +50,7 @@ div#mySocket ,div#searchDiv,div#profileDiv{
     padding: 5px 10px;
     transition: all 0.5s;
     background: rgba(0, 0, 0, 0);
+    color: white;
 }div#mySocket div.options ,div#profileDiv div div.options{
     background: rgba(22, 22, 22, 0.9);
     backdrop-filter: blur(20px);
