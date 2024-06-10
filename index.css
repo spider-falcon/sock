@@ -112,7 +112,7 @@ div#mySocket ,div#searchDiv,div#profileDiv{
     padding: 2px 5px;
     text-align: left;
     text-indent: 5px;
-}div#profileDiv div#profileDivFrame div h#user_nameMain{
+}div#profileDiv div#profileDivFrame div h2#user_nameMain{
     padding: 2px 5px;
     text-align: left;
     text-indent: 5px;
