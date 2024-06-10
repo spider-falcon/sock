@@ -99,15 +99,15 @@ div#mySocket ,div#searchDiv,div#profileDiv{
     padding: 5px;
     margin: 10px 0px;
 }div#profileDiv div#profileDivFrame img#userMainlogo{
-	width: 120px;
-	height: 120px;
+	width: 160px;
+	height: 160px;
 	padding: 5px;
 	background: white;
 	border: 2px solid #282828;
 	border-radius: 50%;
-	margin: 15px 5px 15px auto; 
+	margin: 15px 15px 15px auto; 
 }div#profileDiv div#profileDivFrame div{
-	margin: 15px auto 15px 5px; 
+	margin: 15px auto 15px 15px; 
 }div#profileDiv div#profileDivFrame div h1#usernameMain{
     padding: 2px 5px;
 }div#profileDiv div#profileDivFrame div h1#user_nameMain{
