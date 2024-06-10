@@ -33,6 +33,9 @@ div#appContent{
     border-radius: 15px;
     padding: 10px;
     width: 50%;
+    display: flex;
+}div.navigateBar a{
+    margin: auto;
 }
 
 
