@@ -11,3 +11,25 @@ html{
     margin: 0px;
     background: linear-gradient(45deg,rgb(31, 31, 31),rgb(14, 14, 14) 20%,rgb(24, 24, 24));
 }
+
+div#appContent{
+    padding :0px;
+    margin: 0px;
+    height: 100%;
+    width: 100%;
+}div.navigateBar{
+    z-index: 100;
+    position: fixed;
+    padding: 15px;
+    bottom: 5px;
+    border: 2px solid transparent;
+    border-radius: 15px;
+}
+
+.material-symbols-rounded {
+  font-variation-settings:
+  'FILL' 1,
+  'wght' 700,
+  'GRAD' 200,
+  'opsz' 24
+}
