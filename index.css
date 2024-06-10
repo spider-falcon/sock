@@ -75,8 +75,19 @@ div#mySocket ,div#searchDiv{
     margin: 15px;
     padding: 0px;
 }div.searchField input#searchQuery{
+    border-bottom: 2px solid rgba(83, 83, 83, 0.8);
+    background: rgba(7, 7, 7, 0.8);
+    width: 95%;
+}div.searchField input#searchQuery:hover{
     border-bottom: 2px solid rgba(245, 245, 245, 0.8);
+}div#searchFilterDiv{
+    padding: 15px;
+    transition: all 1s;
+}div#searchFilterDiv span{
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
+
 
 img#smallLogo{
     width: 30px;
