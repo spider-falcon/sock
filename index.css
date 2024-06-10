@@ -17,11 +17,12 @@ div#appContent{
     margin: 0px;
     height: 100%;
     width: 100%;
-}div.navigateBar{
+}center.bottom{
     z-index: 100;
     position: fixed;
     padding: 15px;
     bottom: 5px;
+}div.navigateBar{
     border: 2px solid transparent;
     border-radius: 15px;
 }
@@ -31,5 +32,6 @@ div#appContent{
   'FILL' 1,
   'wght' 700,
   'GRAD' 200,
-  'opsz' 24
+  'opsz' 24;
+  color: white;
 }
