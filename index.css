@@ -37,8 +37,8 @@ div#appContent{
 
 
 img#smallLogo{
-    width: 42px;
-    height: 42px;
+    width: 24px;
+    height: 24px;
     padding: 2px;
     background: white;
     backdrop-filter: blur(12px);
