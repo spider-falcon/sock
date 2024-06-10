@@ -50,17 +50,16 @@ div#mySocket{
     border: 3px solid rgb(34, 34, 34);
     border-radius: 20px;
     position: absolute;
-    width: min-content;
+    width: max-content;
 }div#mySocket div.options button#butWorldGallery,div#mySocket div.options button#butMyGallery{
     border: none;
     border-radius: 15px;
-    padding: 5px 8px;
+    padding: 2px 8px;
     background: rgba(0, 0, 0, 0);
     color: white;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }div#mySocket div.options button#butWorldGallery:active,div#mySocket div.options button#butMyGallery:active{
     border-radius: 15px;
-    padding: 1px;
     background: rgba(31, 31, 31, 0.9);
 }
 
