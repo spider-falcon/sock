@@ -10,6 +10,10 @@ html{
     padding: 0px;
     margin: 0px;
     background: linear-gradient(45deg,rgb(31, 31, 31),rgb(14, 14, 14) 20%,rgb(24, 24, 24));
+}a{
+    color: white;
+}a:visited{
+    color: white;
 }
 
 div#appContent{
@@ -22,9 +26,22 @@ div#appContent{
     position: fixed;
     padding: 15px;
     bottom: 5px;
+    margin: auto;
+    width: 50%;
 }div.navigateBar{
     border: 2px solid transparent;
     border-radius: 15px;
+}
+
+
+img#smallLogo{
+    width: 42px;
+    height: 42px;
+    padding: 2px;
+    background: white;
+    backdrop-filter: blur(12px);
+    border: 2px solid rgba(29, 29, 29, 0.8);
+    border-radius: 50%;
 }
 
 .material-symbols-rounded {
