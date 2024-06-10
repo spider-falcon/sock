@@ -1,4 +1,4 @@
-const CACHE_NAME = 'REALM 0.1 Alpha';
+const CACHE_NAME = 'sock';
 const urlsToCache = [
   '/',
   '/index.html',
@@ -6,8 +6,9 @@ const urlsToCache = [
   '/style.css',
   '/sock.css',
   '/app.js',
-  'icon',
-  'icon/Realm_transparent2.png'
+  '/icons/socketdark.png',
+  '/icons/socketwhite.png',
+  'icons',
 ];
 
 self.addEventListener('install', event => {
