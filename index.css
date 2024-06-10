@@ -112,7 +112,7 @@ div#mySocket ,div#searchDiv,div#profileDiv{
     padding: 2px 5px;
     text-align: left;
     text-indent: 5px;
-}div#profileDiv div#profileDivFrame div h1#user_nameMain{
+}div#profileDiv div#profileDivFrame div h#user_nameMain{
     padding: 2px 5px;
     text-align: left;
     text-indent: 5px;
@@ -122,6 +122,7 @@ div#profileDiv div#profileDivFrame div div button{
     background: transparent;
     cursor: pointer;
     border: none;
+    color: white;
 }div#profileDiv div#profileDivFrame div div button p{
     font-family: monospace;
     text-transform: lowercase;
