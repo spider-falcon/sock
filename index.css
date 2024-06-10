@@ -76,7 +76,8 @@ div#mySocket ,div#searchDiv{
     padding: 0px;
 }div.searchField input#searchQuery{
     border-bottom: 2px solid rgba(83, 83, 83, 0.8);
-    background: rgba(7, 7, 7, 0.8);
+    background: rgba(15, 15, 15, 0.004);
+    backdrop-filter: blur(15px);
     width: 95%;
 }div.searchField input#searchQuery:hover{
     border-bottom: 2px solid rgba(245, 245, 245, 0.8);
