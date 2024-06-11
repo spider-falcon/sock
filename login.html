@@ -6,19 +6,19 @@
     <title>Login</title>
 </head>
 <body>
-        <input type="text" name="username" id="username">
-        <input type="password" name="password" id="password">
-        <button onclick="sent()">sent</button>
+    <input type="text" name="username" id="username" placeholder="Username">
+    <input type="password" name="password" id="password" placeholder="Password">
+    <button onclick="send()">Send</button>
     <script>
-        function sent() {
-            var value1 = document.getElementById("username").value;
-            var value2 = document.getElementById("username").value;
+        function send() {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
             fetch('https://sock.42web.io/login.php', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify({ key1: value1, key2: value2 }),
+                body: JSON.stringify({ username: username, password: password }),
                 })
                 .then(response => response.json())
                 .then(data => console.log(data))
