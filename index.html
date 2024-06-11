@@ -10,6 +10,7 @@
 <body>
     <script>
         document.addEventListener("DOMContentLoaded",function () {
+            document.
             setTimeout(() => {
                 document.getElementById("logo1").style.display = "block";
             }, 1000);
@@ -20,9 +21,12 @@
             setTimeout(() => {
                 document.getElementById("logo2").style.display = "none";
             }, 4000);
+            setTimeout(() => {
+                document.getElementById("title").remove();
+            }, 5000);
         });
     </script>
-    <center>
+    <center id="#title">
         <img style="display: none;" id="logo1" src="icons/quantaforge.png">
         <img style="display: none;" id="logo2" src="icons/weresomeware.png">
     </center>
