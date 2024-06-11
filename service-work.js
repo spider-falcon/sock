@@ -2,9 +2,7 @@ const CACHE_NAME = 'sock';
 const urlsToCache = [
   '/',
   '/index.html',
-  '/sock.html',
   '/style.css',
-  '/sock.css',
   '/app.js',
   '/icons/socketdark.png',
   '/icons/socketwhite.png',
