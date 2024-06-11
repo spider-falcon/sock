@@ -11,4 +11,6 @@ html{
     margin: 0px;
     background: linear-gradient(45deg,#0b0b0b,#0f0f0f,#0d0d0d);
     backdrop-filter: blur(50px) brightness(50%);
+}img{
+    width: 100%;
 }
